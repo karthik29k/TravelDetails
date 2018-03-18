@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    flavorDimensions "default"
+
+    defaultConfig {
+        applicationId "com.example.karthikreddy.intelimentjson"
+        minSdkVersion 23
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules-debug.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        pro {
+            applicationId = 'com.example.karthikreddy.intelimentjson.pro'
+        }
+
+        free {
+            applicationId = 'com.example.karthikreddy.intelimentjson.free'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services-maps:11.8.0'
+    compile 'com.google.android.gms:play-services-location:11.8.0'
+    //icepick
+    compile 'frankiesardo:icepick:3.0.2'
+    annotationProcessor 'frankiesardo:icepick-processor:3.0.2'
+    // gson - json Serialize and Deserialize
+    compile 'com.google.code.gson:gson:2.8.1'
+    // ButterKnife
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    // unit testing
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:2.8.9'
+    // ui testing
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+}
