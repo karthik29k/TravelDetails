@@ -44,8 +44,8 @@ dependencies {
     compile 'com.google.android.gms:play-services-maps:11.8.0'
     compile 'com.google.android.gms:play-services-location:11.8.0'
     //icepick
-    compile 'frankiesardo:icepick:3.0.2'
-    annotationProcessor 'frankiesardo:icepick-processor:3.0.2'
+    compile 'frankiesardo:icepick:3.2.0'
+    annotationProcessor 'frankiesardo:icepick-processor:3.2.0'
     // gson - json Serialize and Deserialize
     compile 'com.google.code.gson:gson:2.8.1'
     // ButterKnife
